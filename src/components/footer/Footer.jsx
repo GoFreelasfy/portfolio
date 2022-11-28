@@ -12,6 +12,18 @@ export default function Footer() {
       list-style: none;
       text-decoration: none;
     }
+    @media (min-width: 1920px) {
+      #container {
+        padding: 2rem 7.5rem;
+      }
+      #caixa1 {
+        gap: 16.5rem;
+      }
+      #caixa2 {
+        gap: 16.5rem;
+      }
+
+    }
     @media (max-width: 1920px) {
       #container {
         padding: 2rem 7.5rem;
@@ -24,7 +36,7 @@ export default function Footer() {
       }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1320px) {
       #caixa1 {
         gap: 10rem;
       }
@@ -33,7 +45,8 @@ export default function Footer() {
       }
     }
 
-    @media (max-width: 1050px) {
+
+    @media (max-width: 1150px) {
       #logo {
         text-align: center;
       }
