@@ -26,7 +26,7 @@ const DivHeader = styled.div`
     a {
       color: var(--black);
       font-size: 16px;
-      /* font-family: "Poppins",sans-serif; */
+      font-family: "Poppins", sans-serif;
 
       &::after {
         content: "";
