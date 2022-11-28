@@ -191,7 +191,7 @@ export default function Home() {
   return (
     <DivHome>
       <Header />
-      <main className="main">
+      <main id="home" className="main">
         <div className="main-content">
           <h1>
             Alcance maiores resultados com uma <span>Solução Web!</span>
@@ -205,7 +205,7 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <section className="servicos">
+      <section id="servicos" className="servicos">
         <div className="container">
           <div className="servicos-content">
             <span>Nossos serviços</span>
@@ -225,7 +225,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="diferenciais container">
+      <section id="diferenciais" className="diferenciais container">
         <div className="diferenciais-content">
           <span>Diferenciais</span>
           <h2>Por que escolher a Web plataform?</h2>

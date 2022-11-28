@@ -10,7 +10,7 @@ const DivHeader = styled.div`
     padding: 1rem;
   }
   hr {
-    height: 2px;
+    height: 3px;
     background: linear-gradient(90deg, #02485a 0%, #4e96aa 100%);
   }
   .nav {
@@ -48,6 +48,7 @@ const DivHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Poppins", sans-serif;
     gap: 10px;
     background-color: var(--orange);
     padding: 10px 20px;
@@ -68,9 +69,22 @@ const DivHeader = styled.div`
 
   @media (max-width: 768px) {
     .header {
+      flex-direction: row-reverse;
+
+      .logo {
+        margin: 0 auto;
+      }
+      /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem; */
       .menu {
         display: flex;
         flex-direction: column;
+
+        & a {
+          font-size: 24px;
+        }
       }
       & > .nav {
         position: absolute;
@@ -82,7 +96,7 @@ const DivHeader = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--blue);
+        background-color: var(--bg-white);
 
         transform: translateX(-100%);
         transition: all 0.45s;
@@ -157,7 +171,7 @@ export default function Header() {
   return (
     <DivHeader>
       <header className="header container">
-        <div>
+        <div className="logo">
           {/* <img src="" alt="" /> */}
           <h1>Logo</h1>
         </div>
@@ -165,16 +179,16 @@ export default function Header() {
           <nav>
             <ul className="menu">
               <li>
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li>
-                <a href="#">Sobre nós</a>
+                <a href="#sobre-nos">Sobre nós</a>
               </li>
               <li>
-                <a href="#">Serviços</a>
+                <a href="#servicos">Serviços</a>
               </li>
               <li>
-                <a href="#">Contato</a>
+                <a href="#contato">Contato</a>
               </li>
             </ul>
           </nav>

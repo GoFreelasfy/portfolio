@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import arrowLeft from "../../assets/icons/arrow-left.svg";
-export default function CardServicos({ title, descricao }) {
+export default function CardServicos({ title, description }) {
   const DivCardServicos = styled.div`
     background: var(--white);
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.08);
@@ -72,7 +72,7 @@ export default function CardServicos({ title, descricao }) {
   return (
     <DivCardServicos>
       <h3>{title}</h3>
-      <p>{descricao}</p>
+      <p>{description}</p>
       <div className="card-footer">
         <span>Veja mais</span>
         <div className="arrow-left">
