@@ -22,6 +22,9 @@ export default function Footer() {
         #caixa1{
             gap: 16.5rem;
         }
+        #caixa2{
+            gap: 16.5rem;
+        }
 
     }
 
@@ -29,9 +32,12 @@ export default function Footer() {
         #caixa1{
             gap: 10rem;
         }
+        #caixa2{
+            gap: 10rem;
+        }
     }
 
-    @media (max-width: 834px){
+    @media (max-width: 1050px){
         #logo{
             text-align: center;
         }
@@ -41,6 +47,10 @@ export default function Footer() {
             
         }
         #caixa1{
+            display: flex;
+            gap: 3.25rem;
+        }
+        #caixa2{
             display: flex;
             gap: 3.25rem;
         }
@@ -56,6 +66,19 @@ export default function Footer() {
             flex-direction: column;
         }
     }
+    @media (max-width: 450px){
+        #caixa2{
+            flex-wrap: wrap;
+        }
+    }
+    @media (max-width: 430px){
+        #caixa2{
+            gap: 2.3rem;
+        }
+    }
+
+
+
 
     h1{
     /* font-familly: Poppins  */
@@ -95,6 +118,9 @@ export default function Footer() {
         display: flex;
         flex-direction: row;
     }
+    #caixa2{
+        display: flex;
+    }
     #social{
         display: flex;
         flex-direction: column;
@@ -132,36 +158,39 @@ export default function Footer() {
                         <li><a href="" id="telefone">+55 11 957818539</a></li>
                     </div>
                 </div>
-                <div id="caixa1">
-                <div id="empresa">
-                    <h1>Empresa</h1>
-                    <ul id="menu-empresa">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Serviços</a></li>
-                        <li><a href="">Projetos</a></li>
-                        <li><a href="">Sobre nós</a></li>
-                        <li><a href="">Contato</a></li>
-                    </ul>
-                </div>
-                <div id="ajuda">
-                    <h1>Ajuda</h1>
-                    <ul>
-                        <li><a href="">Termos e condições</a></li>
-                        <li><a href="">Mapa do site</a></li>
-                        <li><a href="">FAQ</a></li>
-                    </ul>
-                </div>
-                </div>
-                <div id="social">
-                    <h1>Social</h1>
-                    <a href=""><img src={linkedin} alt='linkedin' /></a>
-                    <a href=""><img src={instagram} alt='instagram' /></a>
-                    <a href=""><img src={facebook} alt='facebook' /></a>
+                <div id="caixa2">
+
+                    <div id="caixa1">
+                        <div id="empresa">
+                            <h1>Empresa</h1>
+                            <ul id="menu-empresa">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Serviços</a></li>
+                                <li><a href="">Projetos</a></li>
+                                <li><a href="">Sobre nós</a></li>
+                                <li><a href="">Contato</a></li>
+                            </ul>
+                        </div>
+                        <div id="ajuda">
+                            <h1>Ajuda</h1>
+                            <ul>
+                                <li><a href="">Termos e condições</a></li>
+                                <li><a href="">Mapa do site</a></li>
+                                <li><a href="">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="social">
+                        <h1>Social</h1>
+                        <a href=""><img src={linkedin} alt='linkedin' /></a>
+                        <a href=""><img src={instagram} alt='instagram' /></a>
+                        <a href=""><img src={facebook} alt='facebook' /></a>
+                    </div>
                 </div>
             </div>
             <hr />
             <div id="direitos">
-            <p>©2022 Todos os direitos reservados XXXXXXX.</p>
+                <p>©2022 Todos os direitos reservados XXXXXXX.</p>
             </div>
         </DivFooter>
     )
