@@ -65,6 +65,90 @@ const DivHeader = styled.div`
   .nav-toggle {
     display: none;
   }
+
+  @media (max-width: 768px) {
+    .header {
+      .menu {
+        display: flex;
+        flex-direction: column;
+      }
+      & > .nav {
+        position: absolute;
+        top: 5.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--blue);
+
+        transform: translateX(-100%);
+        transition: all 0.45s;
+
+        & > a::before {
+          background: transparent;
+        }
+        &.open {
+          transform: translateX(0);
+        }
+      }
+
+      .nav-toggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        & > .bar {
+          position: relative;
+          width: 22px;
+          height: 2px;
+          background: var(--black);
+          transition: all 0.45s ease-in-out;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background: var(--black);
+            width: 100%;
+            transition: all 0.45s ease-in-out;
+          }
+          &::before {
+            width: 32px;
+            transform: translateY(-8px);
+            right: -10px;
+          }
+          &::after {
+            width: 32px;
+            transform: translateY(8px);
+          }
+        }
+      }
+    }
+    .nav-toggle {
+      &.open > .bar {
+        transform: translateX(-40px);
+        background: transparent;
+
+        &::before {
+          width: 32px;
+          transform: rotate(45deg) translate(26px, -26px);
+        }
+        &::after {
+          width: 32px;
+          transform: rotate(-45deg) translate(26px, 26px);
+        }
+      }
+    }
+    .btn-whats {
+      display: none;
+    }
+  }
 `;
 
 export default function Header() {
