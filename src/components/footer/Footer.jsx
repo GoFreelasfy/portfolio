@@ -22,6 +22,7 @@ export default function Footer() {
       #caixa2 {
         gap: 16.5rem;
       }
+
     }
     @media (max-width: 1920px) {
       #container {
@@ -43,6 +44,7 @@ export default function Footer() {
         gap: 10rem;
       }
     }
+
 
     @media (max-width: 1150px) {
       #logo {
