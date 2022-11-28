@@ -5,7 +5,14 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Montserrat, sans-serif"; */
+  font-family: "Montserrat, sans-serif";
+}
+
+ul {
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }
 
 :root{
@@ -23,5 +30,7 @@ export const GlobalStyle = createGlobalStyle`
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 `;
