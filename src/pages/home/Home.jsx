@@ -2,6 +2,8 @@ import React from "react";
 import CardServicos from "../../components/cardServicos/CardServicos";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
+import imagem1 from "../../assets/img/imagem-1.png"
+import imagem2 from "../../assets/img/imagem-2.png"
 import styled from "styled-components";
 import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais";
 import CardSobre from "../../components/cardSobre/CardSobre";
@@ -24,7 +26,7 @@ export default function Home() {
     }
   ]
 
-  
+
   const cardServicosData = [
     {
       id: "1",
@@ -83,6 +85,7 @@ export default function Home() {
   ];
 
   const DivHome = styled.div`
+
     .main {
       background-image: url("./img/hero.png");
       padding: 2rem;
@@ -195,6 +198,133 @@ export default function Home() {
       flex-direction: column;
       gap: 2rem;
     }
+    .sobre {
+      padding-bottom: 10rem;
+
+      .caixa{
+        display: flex;
+        gap: 6.688rem;
+      }
+      .conteudo-texto{
+        width: 35.75rem;
+        margin-top: 3rem;
+      }
+      h1{
+            font-family: "Poppins", sans-serif;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: black;
+            text-align: center;
+        }
+      p {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: #787878;
+            text-align: center;
+            margin-top: 1rem;
+        }
+      img{
+          border-radius: 1rem;
+          max-width: 33.125rem;
+          max-height: 46.688rem;
+        }
+
+      .titulo{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: var(--blue-light);
+
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7.5rem;
+        font-size: 1.5rem;
+      }
+
+
+      #ideia{
+        color: var(--orange);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 2.25rem;
+        }
+      #preocupada{
+        color: var(--blue-light);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 2.25rem;
+        }
+
+      @media (max-width: 1920px) {
+
+          .imagem2{
+            margin-top: -10rem;
+          }
+        
+
+      }
+
+      @media (max-width: 1336px) {
+
+          .titulo{
+            margin-bottom: 2rem;
+          }
+
+          .caixa {
+            align-items: center;
+            flex-direction: column;
+          }
+          .caixa.final {
+            flex-direction: column-reverse;
+          }
+          .imagem2{
+            margin-top: 0rem;
+          }
+          .conteudo-texto{
+            width: 85%;
+          }
+      }
+    @media (max-width: 600px) {
+
+      .conteudo-texto{
+        max-width: 28rem;
+      }
+      
+      h1{
+        text-align: left;
+
+      }
+      p{
+        text-align: left;
+      }
+
+
+    }
+  @media (max-width: 544px) {
+
+    h1 {
+      font-size: 1.5rem;
+    }
+    #ideia{
+      font-size: 1.5rem;
+    }
+    #preocupada{
+      font-size: 1.5rem;
+    }
+    .conteudo-texto{
+        width: 23rem;
+      }
+    img{
+      width: 23rem;
+    }
+  }
+
+      
+      
+
+    }
 
     /*-=-=-=-=-=-=RESPONSIVE=-=-=-=-=-=-*/
     @media (max-width: 1200px) {
@@ -269,18 +399,28 @@ export default function Home() {
         </div>
       </section>
       <section className="sobre">
-        <div className="sobre-content">
-        <span>SOBRE NÓS</span>
-        <div className="sobre-cards">
-          {cardSobre.map((item, index)=> (
-            <CardSobre
-            key={index}
-            title={item.titulo}
-            conteudo={item.conteudo}
-            image={item.imagem}
-            />
-          ))}
-        </div>
+        <div className="container">
+        <span className="titulo">SOBRE NÓS</span>
+          <div className="caixa">
+            <div className="conteudo-texto">
+              <h1>Nascemos como uma empresa <span id="preocupada">preocupada</span> com a dor de muitos clientes.</h1>
+              <p>Muitos clientes, acabam sofrendo golpe, não recebem aquilo que queriam e se sentem frustrados, enxergamos essa dor e então resolvemos entrar no mercado para mudar isso!</p>
+            </div>
+            <div className="imagem">
+              <img src={imagem1} alt="imagem sobre nós" />
+            </div>
+          </div>
+          <div className="caixa final">
+            <div className="imagem imagem2">
+
+              <img  src={imagem2} alt="imagem sobre nós" />
+            </div>
+            <div className="conteudo-texto">
+              <h1>Transformando <span id="ideia">ideias</span> em soluções no mercado!</h1>
+              <p>Somos um time de alta performance preparado para transformar seu projeto em uma solução web! Descubra já como ajudamos outras empresas a decolarem!</p>
+            </div>
+          </div>
+
         </div>
       </section>
       <Footer />
