@@ -4,7 +4,27 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import styled from "styled-components";
 import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais";
+import CardSobre from "../../components/cardSobre/CardSobre";
 export default function Home() {
+  const cardSobre = [
+    {
+      id: "1",
+      titulo: "Nascemos como uma empresa <span>preocupada</span> com a dor de muitos clientes.",
+      conteudo: "Muitos clientes, acabam sofrendo golpe, não recebem aquilo que queriam e se sentem frustrados, enxergamos essa dor e então resolvemos entrar no mercado para mudar isso!",
+      imagem: "./img/imagem-1.svg"
+
+    },
+
+    {
+      id: "2",
+      titulo: "Transformando ideias em soluções no mercado!",
+      conteudo: "Somos um time de alta performance preparado para transformar seu projeto em uma solução web! Descubra já como ajudamos outras empresas a decolarem!",
+      imagem: "./img/imagem-2.svg"
+
+    }
+  ]
+
+  
   const cardServicosData = [
     {
       id: "1",
@@ -246,6 +266,21 @@ export default function Home() {
               description={item.description}
             />
           ))}
+        </div>
+      </section>
+      <section className="sobre">
+        <div className="sobre-content">
+        <span>SOBRE NÓS</span>
+        <div className="sobre-cards">
+          {cardSobre.map((item, index)=> (
+            <CardSobre
+            key={index}
+            title={item.titulo}
+            conteudo={item.conteudo}
+            image={item.imagem}
+            />
+          ))}
+        </div>
         </div>
       </section>
       <Footer />
