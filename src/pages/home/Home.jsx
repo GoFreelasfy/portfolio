@@ -6,7 +6,6 @@ import imagem1 from "../../assets/img/imagem-1.png"
 import imagem2 from "../../assets/img/imagem-2.png"
 import styled from "styled-components";
 import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais";
-import CardSobre from "../../components/cardSobre/CardSobre";
 export default function Home() {
   const cardSobre = [
     {
