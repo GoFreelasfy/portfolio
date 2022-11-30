@@ -4,26 +4,38 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import imagem1 from "../../assets/img/imagem-1.png"
 import imagem2 from "../../assets/img/imagem-2.png"
+
+import html from "../../assets/img/html.svg"
+import css from "../../assets/img/css.svg"
+import js from "../../assets/img/js.svg"
+import react from "../../assets/img/react.svg"
+import java from "../../assets/img/java.svg"
+import spring from "../../assets/img/spring.svg"
+
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
 import styled from "styled-components";
 import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais";
 export default function Home() {
-  const cardSobre = [
-    {
-      id: "1",
-      titulo: "Nascemos como uma empresa <span>preocupada</span> com a dor de muitos clientes.",
-      conteudo: "Muitos clientes, acabam sofrendo golpe, não recebem aquilo que queriam e se sentem frustrados, enxergamos essa dor e então resolvemos entrar no mercado para mudar isso!",
-      imagem: "./img/imagem-1.svg"
 
-    },
+  
+  const handleDragStart = (e) => e.preventDefault();
+  const responsive = {
+    0: { items: 2 },
+    1024: { items: 3 },
+    1400: {items: 6}
+};
+  
+const items = [
+  <img src={html} onDragStart={handleDragStart} role="presentation" />,
+  <img src={css} onDragStart={handleDragStart} role="presentation" />,
+  <img src={js} onDragStart={handleDragStart} role="presentation" />,
+  <img src={react} onDragStart={handleDragStart} role="presentation" />,
+  <img src={java} onDragStart={handleDragStart} role="presentation" />,
+  <img src={spring} onDragStart={handleDragStart} role="presentation" />,
+];
 
-    {
-      id: "2",
-      titulo: "Transformando ideias em soluções no mercado!",
-      conteudo: "Somos um time de alta performance preparado para transformar seu projeto em uma solução web! Descubra já como ajudamos outras empresas a decolarem!",
-      imagem: "./img/imagem-2.svg"
-
-    }
-  ]
 
 
   const cardServicosData = [
@@ -84,6 +96,43 @@ export default function Home() {
   ];
 
   const DivHome = styled.div`
+.tecnologias {
+  .carrosel{
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+
+  }
+}
+
+.alice-carousel{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+
+
+
+}
+.alice-carousel__stage{
+
+}
+.alice-carousel__stage-item{
+}
+
+.alice-carousel__prev-btn  {
+  font-size: 3rem;
+
+}
+.alice-carousel__next-btn  {
+  font-size: 3rem;
+
+
+
+}
+
+
 
     .main {
       background-image: url("./img/hero.png");
@@ -197,6 +246,18 @@ export default function Home() {
       flex-direction: column;
       gap: 2rem;
     }
+    .titulo{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: var(--blue-light);
+
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+      }
     .sobre {
       padding-bottom: 10rem;
 
@@ -229,18 +290,7 @@ export default function Home() {
           max-height: 46.688rem;
         }
 
-      .titulo{
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        color: var(--blue-light);
 
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 7.5rem;
-        font-size: 1.5rem;
-      }
 
 
       #ideia{
@@ -318,12 +368,18 @@ export default function Home() {
     img{
       width: 23rem;
     }
+
+
   }
 
-      
-      
-
     }
+
+  .tecnologias {
+    .carrosel{
+      display: flex;
+      align-items: center;
+    }
+  }
 
     /*-=-=-=-=-=-=RESPONSIVE=-=-=-=-=-=-*/
     @media (max-width: 1200px) {
@@ -419,7 +475,23 @@ export default function Home() {
               <p>Somos um time de alta performance preparado para transformar seu projeto em uma solução web! Descubra já como ajudamos outras empresas a decolarem!</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="tecnologias">
+        <div className="container">
+          <span className="titulo">TECNOLOGIAS</span>
+          <div className="carrosel">
+          <AliceCarousel
 
+          mouseTracking 
+          items={items}
+          responsive={responsive}
+          innerWidth={responsive}
+          autoPlay={true}
+          autoPlayInterval={4000}
+          infinite={true}
+          />
+          </div>
         </div>
       </section>
       <Footer />
