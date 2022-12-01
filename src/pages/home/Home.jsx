@@ -321,6 +321,11 @@ export default function Home() {
   .faq{
     background-color: var(--bg-white);
     .container {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       .titulo {
         span{
           font-family: "Poppins", sans-serif;
@@ -333,6 +338,8 @@ export default function Home() {
 
     }
     .texto{
+      padding: 0;
+      margin: 0 ;
       text-align: center;
       margin-bottom: 3rem;
       h1{
@@ -341,6 +348,7 @@ export default function Home() {
         font-weight: 500;
       }
       p{
+
         font-size: 1.25rem;
         font-family: "Poppins", sans-serif;
         color: var(--gray);
@@ -425,7 +433,7 @@ export default function Home() {
 @media (max-width: 600px) {
 
 .conteudo-texto{
-max-width: 28rem;
+max-width: 20rem;
 }
 
 h1{
@@ -436,9 +444,23 @@ p{
 text-align: left;
 }
 
+.faq {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  .texto{
+    h1{
+      text-align: center;
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
 
 }
 @media (max-width: 544px) {
+
 
 h1 {
 font-size: 1.5rem;
