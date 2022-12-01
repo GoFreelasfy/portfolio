@@ -8,18 +8,21 @@ const DivFaq = styled.div`
 margin: 0;
 
 .caixa{
+    
     margin: 0 auto;
     width: 100%;
+    border-bottom: solid 2px var(--gray);
+    align-items: center;
+    justify-content: center;
 
     h1{
+
         display: flex;
         width: 100%;
         font-family: "Poppins", sans-serif;
         font-size:1.5rem;
         font-weight: 500;
         padding: 1rem 0;
-        border-bottom: solid 2px var(--gray);
-        flex-wrap: wrap;
       }
       p{
         font-size: 1.25rem;
@@ -31,12 +34,12 @@ margin: 0;
 
       }
 }
-.resposta{
 
-}
+
 
 `
 const Wrap = styled.div`
+    gap: 20rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -46,14 +49,29 @@ const Wrap = styled.div`
     margin-bottom: 1rem;
 
     span {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        right: 5rem;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10rem;
+        right: 3rem;
+        top: 1rem;
         position: relative;
         font-size: 2rem;
         width: 1rem;
 
     }
+
+    @media (max-width: 770px) {
+        gap: 10rem;
+}
+    @media (max-width: 598px) {
+        justify-content: space-between;
+        gap: 4rem;
+}
+    @media (max-width: 488px) {
+        gap: 0rem;
+}
+
+
 `
 
 
