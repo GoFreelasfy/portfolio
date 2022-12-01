@@ -31,6 +31,16 @@ export default function CardDiferenciais({ title, image, description }) {
         font-size: 14px;
       }
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      .img-icone {
+        width: 60px;
+        img {
+          width: 100%;
+        }
+      }
+    }
   `;
   return (
     <DivCardDiferenciais>
