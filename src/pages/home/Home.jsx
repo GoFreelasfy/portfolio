@@ -409,6 +409,14 @@ export default function Home() {
 
 
 }
+@media (min-width: 1920px) {
+
+.imagem2{
+  margin-top: -10rem;
+}
+
+
+}
 
 @media (max-width: 1336px) {
 
