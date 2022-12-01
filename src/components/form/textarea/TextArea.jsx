@@ -26,11 +26,17 @@ export default function TextArea({ name, id, text, placeholder }) {
       margin-top: 10px;
       margin-bottom: 2rem;
       display: block;
-      width: 100%;
+      width: 99%;
       padding-left: 1rem;
       color: var(--black);
       font-family: "Montserrat", sans-serif;
       font-size: 14px;
+    }
+
+    @media (max-width: 1200px) {
+      .form_control textarea {
+        width: 90%;
+      }
     }
   `;
   return (

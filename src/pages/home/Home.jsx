@@ -72,30 +72,6 @@ export default function Home() {
     },
   ];
 
-  const cardDiferenciaisData = [
-    {
-      id: "1",
-      image: "./icons/design.png",
-      title: "Design Responsivo",
-      description:
-        "Trabalhamos com estruturas totalmente responsivas e Mobile Friendly!",
-    },
-    {
-      id: "2",
-      image: "./icons/sprint.png",
-      title: "Metodologias Ágeis",
-      description:
-        "Nossa metodologia contribui para um desenvolvimento prático e bem estruturado!",
-    },
-    {
-      id: "3",
-      image: "./icons/hospedagem.png",
-      title: "Hospedagem e SEO",
-      description:
-        "Fazemos o suporte de hospedagens de sites, criação de domínio e metricas avançadas de visibilidade e gestão!",
-    },
-  ];
-
   return (
     <DivHome>
       <Header />
@@ -245,7 +221,7 @@ export default function Home() {
           <Faq data={Data} />
 
           <div className="botao">
-            <button>Mais Dúvidas</button>
+            <button className="btn">Mais Dúvidas</button>
           </div>
         </div>
       </section>

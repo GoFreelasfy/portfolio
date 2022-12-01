@@ -279,7 +279,6 @@ export const DivHome = styled.div`
     }
   }
   .fale-conosco-content {
-    text-align: center;
     h2,
     p {
       font-family: "Poppins", sans-serif;
@@ -316,15 +315,19 @@ export const DivHome = styled.div`
     }
 
     .form {
+      gap: 0;
     .col-2 {
-      grid-template-columns: 1fr;
-      margin-bottom: 2rem;
-      
+      grid-template-columns:1fr;
+      margin: 2rem 0;
       input {
-        margin: 10px auto 2rem auto;
+        margin: 0;
       }
-  
+      label{
+        display: block;
+        margin-bottom: .25rem;
+      }
     }
+ 
   }
   @media (max-width: 768px) {
     .servicos-cards {
@@ -389,8 +392,8 @@ export const DivHome = styled.div`
     .conteudo-texto {
       width: 23rem;
     }
-    img {
+    /* img {
       width: 23rem;
-    }
+    } */
   }
 `;
