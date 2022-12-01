@@ -22,6 +22,7 @@ export default function Input({
       border-radius: 10px;
       border: none;
       margin: 10px auto 2rem auto;
+      background-color: red;
     }
 
     .form_control input::placeholder {
@@ -64,8 +65,6 @@ export default function Input({
       padding: 1.2rem 0;
       width: 100%;
     }
-
-    /*Input checkbox*/
   `;
   return (
     <DivInput>

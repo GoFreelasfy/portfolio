@@ -72,6 +72,7 @@ export default function Home() {
     },
   ];
 
+
   const cardDiferenciaisData = [
     {
       id: "1",
@@ -637,7 +638,7 @@ width: 23rem;
           <Faq data={Data} />
 
           <div className="botao">
-            <button>Mais Dúvidas</button>
+            <button className="btn">Mais Dúvidas</button>
           </div>
         </div>
       </section>
