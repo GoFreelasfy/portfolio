@@ -39,6 +39,7 @@ margin: 0;
 
 `
 const Wrap = styled.div`
+
     gap: 20rem;
     justify-content: center;
     align-items: center;
@@ -75,9 +76,22 @@ const Wrap = styled.div`
 `
 
 
+
 const Faq = ({ data }) => {
 
+    const [show, setShow] = useState(false)
+
     const [clicked, setClicked] = useState(false)
+
+    const visible = data => {
+        if (data[index].visivel == true) {
+            setBtnClicked(false)
+        } else {
+            setBtnClicked(true)
+        }
+    }
+
+
 
     const toggle = index => {
         if (clicked === index) {
@@ -86,10 +100,8 @@ const Faq = ({ data }) => {
         }
 
         setClicked(index)
-
-
     }
-    
+
 
     return (
         <IconContext.Provider value={{ color: 'var(--orange-dark)' }}>
@@ -97,24 +109,38 @@ const Faq = ({ data }) => {
             <DivFaq>
                 {data.map((item, index) => {
                     return (
+                        <div className="global">
+                     
+                            {index >= 6 ?
+                                <div className="controle">
+                                    <div className="caixa">
+                                        <Wrap onClick={() => toggle(index)} key={index}>
+                                            <h1>{item.pergunta}</h1>
+                                            <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                                        </Wrap>
 
-                        <div className="caixa">
-                            <Wrap onClick={() => toggle(index)} key={index}>
-                                <h1>{item.pergunta}</h1>
-                                <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                            </Wrap>
-                            {clicked === index ? (
+                                    </div>
+                                    {clicked === index ? (
 
-                                <div className="resposta">
-                                    <p>{item.resposta}</p>
+                                        <div className="resposta">
+                                            <p>{item.resposta}</p>
+                                        </div>
+
+                                    ) : null}
+
                                 </div>
-
-                            ): null}
-
+                                : null}
                         </div>
 
+
+
                     )
+
                 })}
+
+                <div className="botao">
+                    <button onClick={() => setShow(true)} ></button>
+                </div>
             </DivFaq>
         </IconContext.Provider>
     )

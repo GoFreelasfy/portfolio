@@ -603,9 +603,7 @@ width: 23rem;
           <Faq
             data={Data} />
 
-          <div className="botao">
-            <button>Mais Dúvidas</button>
-          </div>
+         
         </div>
       </section>
       <Footer />
