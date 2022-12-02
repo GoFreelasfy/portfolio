@@ -6,76 +6,62 @@ import styled from "styled-components";
 const DivFaq = styled.div`
   margin: 0;
 
-.caixa{
-    
-
+  .caixa {
     margin: 0 auto;
     width: 100%;
     border-bottom: solid 2px var(--gray);
     align-items: center;
     justify-content: center;
 
-
-    h1{
-
-        display: flex;
-        width: 100%;
-        font-family: "Poppins", sans-serif;
-        font-size:1.5rem;
-        font-weight: 500;
-        padding: 1rem 0;
-      }
-      p{
-        font-size: 1.25rem;
-        padding: 2rem 0;
-        font-family: "Poppins", sans-serif;
-        color: var(--gray);
-        font-weight: 500;
-
-
-      }
-}
-
-
-
-`
-const Wrap = styled.div`
-    gap: 20rem;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    position: relative;
-    margin-bottom: 1rem;
-
-    span {
-        align-items: center;
-        justify-content: center;
-        padding-left: 10rem;
-        right: 3rem;
-        top: 1rem;
-        position: relative;
-        font-size: 2rem;
-        width: 1rem;
-
+    h1 {
+      display: flex;
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 1rem 0;
     }
+    p {
+      font-size: 1.25rem;
+      padding: 2rem 0;
+      font-family: "Poppins", sans-serif;
+      color: var(--gray);
+      font-weight: 500;
+    }
+  }
+`;
+const Wrap = styled.div`
+  gap: 20rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
 
-    @media (max-width: 770px) {
-        gap: 10rem;
-}
-    @media (max-width: 598px) {
-        justify-content: space-between;
-        gap: 4rem;
-}
-    @media (max-width: 488px) {
-        gap: 0rem;
-}
+  span {
+    align-items: center;
+    justify-content: center;
+    padding-left: 10rem;
+    right: 3rem;
+    top: 1rem;
+    position: relative;
+    font-size: 2rem;
+    width: 1rem;
+  }
 
-
-`
-
-
+  @media (max-width: 770px) {
+    gap: 10rem;
+  }
+  @media (max-width: 598px) {
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  @media (max-width: 488px) {
+    gap: 0rem;
+  }
+`;
 
 const Faq = ({ data }) => {
   const [clicked, setClicked] = useState(false);
