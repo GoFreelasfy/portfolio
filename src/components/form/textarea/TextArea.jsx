@@ -16,6 +16,7 @@ export default function TextArea({ name, id, text, placeholder }) {
     }
 
     .form_control textarea {
+      resize: none;
       background-color: var(--white);
       border: none;
       border-radius: 10px;
@@ -26,7 +27,7 @@ export default function TextArea({ name, id, text, placeholder }) {
       margin-top: 10px;
       margin-bottom: 2rem;
       display: block;
-      width: 99%;
+      width: 100%;
       padding-left: 1rem;
       color: var(--black);
       font-family: "Montserrat", sans-serif;
@@ -44,7 +45,7 @@ export default function TextArea({ name, id, text, placeholder }) {
       <DivTextArea>
         <div className="form_control">
           <label htmlFor={id}>{text}</label>
-          <textarea
+          <textarea 
             name={name}
             id={id}
             rows="10"

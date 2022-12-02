@@ -24,10 +24,10 @@ import TextArea from "../../components/form/textarea/TextArea";
 export default function Home() {
   const handleDragStart = (e) => e.preventDefault();
   const responsive = {
-    0: { items: 2 },
-    640: { items: 3 },
-    1024: { items: 3 },
-    1400: { items: 6 },
+    0: { items: 2, itemsFit: 'contain' },
+    640: { items: 4, itemsFit: 'contain' },
+    1024: { items: 4 , itemsFit: 'contain' },
+    1400: { items: 6, itemsFit: 'contain' },
   };
 
   const items = [
@@ -178,16 +178,8 @@ export default function Home() {
           <span className="titulo">SOBRE NÓS</span>
           <div className="caixa">
             <div className="conteudo-texto">
-              <h1>
-                Nascemos como uma empresa{" "}
-                <span id="preocupada">preocupada</span> com a dor de muitos
-                clientes.
-              </h1>
-              <p>
-                Muitos clientes, acabam sofrendo golpe, não recebem aquilo que
-                queriam e se sentem frustrados, enxergamos essa dor e então
-                resolvemos entrar no mercado para mudar isso!
-              </p>
+              <h1>Nascemos como uma empresa <span id="preocupada">preocupada</span> com a dor de muitos clientes.</h1>
+              <p>Muitos clientes, acabam sofrendo golpe, não recebem aquilo que queriam e se sentem frustrados, enxergamos essa dor e então resolvemos entrar no mercado para mudar isso!</p>
             </div>
             <div className="imagem">
               <img src={imagem1} alt="imagem sobre nós" />
@@ -195,18 +187,12 @@ export default function Home() {
           </div>
           <div className="caixa final">
             <div className="imagem imagem2">
+
               <img src={imagem2} alt="imagem sobre nós" />
             </div>
             <div className="conteudo-texto">
-              <h1>
-                Transformando <span id="ideia">ideias</span> em soluções no
-                mercado!
-              </h1>
-              <p>
-                Somos um time de alta performance preparado para transformar seu
-                projeto em uma solução web! Descubra já como ajudamos outras
-                empresas a decolarem!
-              </p>
+              <h1>Transformando <span id="ideia">ideias</span> em soluções no mercado!</h1>
+              <p>Somos um time de alta performance preparado para transformar seu projeto em uma solução web! Descubra já como ajudamos outras empresas a decolarem!</p>
             </div>
           </div>
         </div>
@@ -217,6 +203,7 @@ export default function Home() {
           <div className="carrosel">
             <AliceCarousel
               mouseTracking
+              autoHeight={true}
               items={items}
               responsive={responsive}
               innerWidth={responsive}
@@ -244,9 +231,7 @@ export default function Home() {
           </div>
           <Faq data={Data} />
 
-          <div className="botao">
-            <button className="btn">Mais Dúvidas</button>
-          </div>
+  
         </div>
       </section>
       <section className="fale-conosco">
