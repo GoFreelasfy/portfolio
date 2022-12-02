@@ -45,6 +45,8 @@ a{
     border-radius: 5px;
     color: var(--white);
     transition: 0.2s all ease-in;
+    cursor: pointer;
+    border: 0;
 
     &:hover {
       background: var(--orange-dark);
