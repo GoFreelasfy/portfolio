@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DivHome = styled.div`
-.tecnologias {
+  .tecnologias {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,25 +9,23 @@ export const DivHome = styled.div`
     width: 100%;
     margin: 0 auto;
     padding: 0;
-  .container {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .container {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-  .carrosel {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
+      .carrosel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   }
-  }
-}
-  
 
   .main {
     background-image: url("./img/hero.png");
@@ -159,62 +157,54 @@ export const DivHome = styled.div`
     font-size: 1.5rem;
   }
   .sobre {
-      padding-bottom: 10rem;
+    padding-bottom: 10rem;
 
-      .caixa{
-        display: flex;
-        gap: 6.688rem;
-      }
-      .conteudo-texto{
-        width: 35.75rem;
-        margin-top: 3rem;
-      }
-      h1{
-            font-family: "Poppins", sans-serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: black;
-            text-align: center;
-        }
-      p {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-            font-size: 1.5rem;
-            color: #787878;
-            text-align: center;
-            margin-top: 1rem;
-        }
-      img{
-          border-radius: 1rem;
-          max-width: 33.125rem;
-          max-height: 46.688rem;
-          position: relative;
-        }
-
-
-
-
-
-      #ideia{
-        color: var(--orange);
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 2.25rem;
-        }
-      #preocupada{
-        color: var(--blue-light);
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 2.25rem;
-        }
-      .imagem2 {
-        position: relative;
-
-      }
-
-
-
+    .caixa {
+      display: flex;
+      gap: 6.688rem;
     }
+    .conteudo-texto {
+      width: 35.75rem;
+      margin-top: 3rem;
+    }
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: black;
+      text-align: center;
+    }
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #787878;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    img {
+      border-radius: 1rem;
+      max-width: 33.125rem;
+      max-height: 46.688rem;
+      position: relative;
+    }
+
+    #ideia {
+      color: var(--orange);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 2.25rem;
+    }
+    #preocupada {
+      color: var(--blue-light);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 2.25rem;
+    }
+    .imagem2 {
+      position: relative;
+    }
+  }
   .faq {
     background-color: var(--bg-white);
     .container {
@@ -308,18 +298,16 @@ export const DivHome = styled.div`
       margin-bottom: 2rem;
     }
   }
-  
+
   /*-=-=-=-=-=-=RESPONSIVE=-=-=-=-=-=-*/
   @media (max-width: 1920px) {
-     .imagem2 {
-     top: -10rem;
-    
+    .imagem2 {
+      top: -10rem;
     }
   }
   @media (max-width: 1320px) {
-     .imagem2 {
+    .imagem2 {
       top: 0rem;
-    
     }
   }
   @media (max-width: 1200px) {
@@ -350,24 +338,14 @@ export const DivHome = styled.div`
       }
     }
     @media (max-width: 1200px) {
-      .servicos-cards {
+      /* .servicos-cards {
         grid-template-columns: repeat(2, 300px);
-      }
+      } */
     }
-    @media (max-width: 768px) {
-      .servicos-cards {
-        grid-template-columns: 300px;
-      }
-    }
-
     @media (max-width: 1322px) {
       .imagem.imagem2 {
       }
     }
-    
-
-
-    
 
     @media (max-width: 1336px) {
       .titulo {
@@ -390,7 +368,30 @@ export const DivHome = styled.div`
     @media (max-width: 768px) {
       .servicos-cards {
         grid-template-columns: 300px;
+        /* display: flex; */
+        /* flex-basis: 0; */
+        /* grid-template-columns: repeat(4, 300px); */
+        /* padding: 1rem; */
+        /* margin-left: 2rem; */
+        /* grid-auto-flow: column;
+        grid-auto-columns: 45%;
+        gap: 5rem;
+        background-color: red;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain; */
+        /* object-fit: cover; */
+
+        & > div {
+          /* inline-size: 100%;
+          aspect-ratio: 16 / 9; */
+        }
+        /* grid-auto-flow: row; */
+
+        /* &::-webkit-scrollbar {
+          width: 0;
+        } */
       }
+
       .diferenciais-cards {
         flex-direction: column;
       }
@@ -402,28 +403,27 @@ export const DivHome = styled.div`
     @media (max-width: 600px) {
       .conteudo-texto {
         max-width: 20rem;
-      }
-
-      h1 {
-        text-align: left;
-      }
-      p {
-        text-align: left;
+        h1 {
+          text-align: left;
+        }
+        p {
+          text-align: left;
+        }
       }
     }
     .faq {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  .texto{
-    h1{
-      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      .texto {
+        h1 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
     }
-    p{
-      text-align: center;
-    }
-  }
-}
     @media (max-width: 544px) {
       h1 {
         font-size: 1.5rem;
@@ -437,10 +437,9 @@ export const DivHome = styled.div`
       .conteudo-texto {
         width: 23rem;
       }
-      .sobre img{
+      .sobre img {
         width: 23rem;
       }
-
     }
   }
 `;
