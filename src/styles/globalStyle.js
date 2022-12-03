@@ -34,7 +34,12 @@ a{
   padding-left: 7rem;
   padding-right: 7rem;
 }
-
+@media (max-width: 768px) {
+      .container{
+        padding-left: 2rem;
+      padding-right: 2rem;
+      }
+    }
 
 .btn {
   font-family: "Poppins",sans-serif;

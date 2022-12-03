@@ -1,7 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import arrowLeft from "../../assets/icons/arrow-left.svg";
-export default function CardServicos({ title, description }) {
+import * as Dialog from "@radix-ui/react-dialog";
+import ModalServicos from "../modalServicos/ModalServicos";
+
+export default function CardServicos({
+  title,
+  image,
+  description,
+  longDescription,
+}) {
   const DivCardServicos = styled.div`
     background: var(--white);
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.08);
@@ -12,6 +20,7 @@ export default function CardServicos({ title, description }) {
     cursor: pointer;
     flex-direction: column;
     gap: 1rem;
+    border: 0;
     transition: 0.2s all ease-in-out;
 
     &:hover {
@@ -70,15 +79,25 @@ export default function CardServicos({ title, description }) {
     }
   `;
   return (
-    <DivCardServicos>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <div className="card-footer">
-        <span>Veja mais</span>
-        <div className="arrow-left">
-          <img src={arrowLeft} alt="Icone de seta para esquerda" />
-        </div>
-      </div>
-    </DivCardServicos>
+    <Dialog.Root>
+      <Dialog.Trigger asChild>
+        <DivCardServicos>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <div className="card-footer">
+            <span>Veja mais</span>
+            <div className="arrow-left">
+              <img src={arrowLeft} alt="Icone de seta para esquerda" />
+            </div>
+          </div>
+        </DivCardServicos>
+      </Dialog.Trigger>
+      <ModalServicos
+        title={title}
+        image={image}
+        description={description}
+        longDescription={longDescription}
+      />
+    </Dialog.Root>
   );
 }
