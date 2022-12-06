@@ -22,6 +22,7 @@ import Faq from "../../components/sanfonaFaq/Faq";
 import { Data } from "../../components/sanfonaFaq/Data";
 import Input from "../../components/form/input/Input";
 import TextArea from "../../components/form/textarea/TextArea";
+import Carrossel from "../../components/carosselTechs/Carrossel";
 export default function Home() {
   const handleDragStart = (e) => e.preventDefault();
   const responsive = {
@@ -157,6 +158,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+        <div className="container">
+          <Carrossel/>
+        </div>
+      </section>
       <section className="tecnologias">
         <div className="container">
           <span className="titulo">TECNOLOGIAS</span>
@@ -174,6 +180,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+   
       <section className="faq">
         <div className="container">
           <div className="titulo">
