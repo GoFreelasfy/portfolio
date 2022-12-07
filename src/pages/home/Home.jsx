@@ -6,14 +6,8 @@ import imagem1 from "../../assets/img/imagem-1.png";
 import imagem2 from "../../assets/img/imagem-2.png";
 import { DivHome } from "../../styles/styles";
 
-import html from "../../assets/img/html.svg";
-import css from "../../assets/img/css.svg";
-import js from "../../assets/img/js.svg";
-import react from "../../assets/img/react.svg";
-import java from "../../assets/img/java.svg";
-import spring from "../../assets/img/spring.svg";
 
-import AliceCarousel from "react-alice-carousel";
+
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais";
@@ -23,23 +17,9 @@ import { Data } from "../../components/sanfonaFaq/Data";
 import Input from "../../components/form/input/Input";
 import TextArea from "../../components/form/textarea/TextArea";
 import Carrossel from "../../components/carosselTechs/Carrossel";
-export default function Home() {
-  const handleDragStart = (e) => e.preventDefault();
-  const responsive = {
-    0: { items: 2, itemsFit: "contain" },
-    640: { items: 4, itemsFit: "contain" },
-    1024: { items: 4, itemsFit: "contain" },
-    1400: { items: 6, itemsFit: "contain" },
-  };
 
-  const items = [
-    <img src={html} onDragStart={handleDragStart} role="presentation" />,
-    <img src={css} onDragStart={handleDragStart} role="presentation" />,
-    <img src={js} onDragStart={handleDragStart} role="presentation" />,
-    <img src={react} onDragStart={handleDragStart} role="presentation" />,
-    <img src={java} onDragStart={handleDragStart} role="presentation" />,
-    <img src={spring} onDragStart={handleDragStart} role="presentation" />,
-  ];
+export default function Home() {
+
 
   return (
     <DivHome>
@@ -158,26 +138,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <Carrossel/>
-        </div>
-      </section>
+ 
       <section className="tecnologias">
-        <div className="container">
+        <div className="container-carrossel">
           <span className="titulo">TECNOLOGIAS</span>
-          <div className="carrosel">
-            <AliceCarousel
-              mouseTracking
-              autoHeight={true}
-              items={items}
-              responsive={responsive}
-              innerWidth={responsive}
-              autoPlay={true}
-              autoPlayInterval={4000}
-              infinite={true}
-            />
-          </div>
+          <Carrossel/>
+
         </div>
       </section>
    
