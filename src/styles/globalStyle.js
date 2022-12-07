@@ -28,6 +28,7 @@ a{
   --blue-dark:#02485A;
 }
 
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
