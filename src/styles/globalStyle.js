@@ -28,7 +28,12 @@ a{
   --blue-dark:#02485A;
 }
 
-
+.tecnologias {
+  margin-bottom: 20rem;
+}
+.container-carrossel {
+  width: 90%;
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;

@@ -7,6 +7,7 @@ export const DivHome = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 0 auto;
     padding: 0;
     .container {
       margin: 0 auto;
@@ -17,7 +18,7 @@ export const DivHome = styled.div`
       justify-content: center;
 
     .tecnologias {
-      margin-bottom: 6.25rem;
+      margin-bottom: 20rem;
     }
     .container-carrossel {
       width: 90%;
