@@ -332,17 +332,27 @@ export const DivHome = styled.div`
     }
     .form {
       gap: 0;
+      min-width: 100%;
       .col-2 {
         grid-template-columns: 1fr;
         margin: 2rem 0;
+        width: 100%;
         input {
+          min-width: 100%;
           margin: 0;
         }
+   
         label {
           display: block;
           margin-bottom: 0.25rem;
         }
       }
+      input{
+        min-width: 100%;
+      }
+    }
+    .mensagem{
+      min-width: 100%;
     }
     @media (max-width: 1200px) {
       /* .servicos-cards {

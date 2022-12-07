@@ -5,6 +5,8 @@ import styled from "styled-components";
 
 const DivFaq = styled.div`
   margin: 0;
+  margin-bottom: 7rem;
+
 
   .caixa {
     margin: 0 auto;
@@ -12,6 +14,10 @@ const DivFaq = styled.div`
     border-bottom: solid 2px var(--gray);
     align-items: center;
     justify-content: center;
+
+    .resposta {
+      max-width:1000px;
+    }
 
     h1 {
       display: flex;

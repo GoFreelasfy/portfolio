@@ -1,7 +1,7 @@
 export const Data = [
     {
         pergunta: "Por que contratar a Empresa?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+        resposta: "Oferecemos um serviço completo aos nossos clientes, desde o primeiro contato, onde levantamos o escopo da solução, até a entrega com tudo estipulado da forma que foi solicitado!",
         visivel: true
     },
     {
