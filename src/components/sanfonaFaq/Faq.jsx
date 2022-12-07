@@ -94,7 +94,7 @@ const Faq = ({ data }) => {
         {data.map((item, index) => {
           return (
             <div className="global">
-              {show && item.visivel == true ? (
+              
                 <div className="controle">
                   <div className="caixa">
                     <Wrap onClick={() => toggle(index)} key={index}>
@@ -111,15 +111,10 @@ const Faq = ({ data }) => {
                     ) : null}
                   </div>
                 </div>
-              ) : null}
             </div>
           );
         })}
 
-        <div className="botao">
-          <button onClick={() => setShow(!show)}>Mais Duvidas</button>
-          <button onClick={() => alterar(data)}>Update</button>
-        </div>
       </DivFaq>
     </IconContext.Provider>
   );
