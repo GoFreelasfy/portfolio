@@ -15,6 +15,7 @@ const Overlay = styled(Dialog.Overlay)`
 `;
 const Content = styled(Dialog.Content)`
   min-width: 32rem;
+  max-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
   background: var(--white);
@@ -33,9 +34,8 @@ const Content = styled(Dialog.Content)`
     margin-bottom: 2rem;
   }
   .servico-img {
-    width: 300px;
-    height: 300px;
     border-radius: 10px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
@@ -47,6 +47,21 @@ const Content = styled(Dialog.Content)`
   .description {
     color: var(--gray);
     font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 24rem;
+    .title {
+      font-size: 24px;
+    }
+    .servico-img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    min-width: 18rem;
   }
 `;
 const CloseButton = styled(Dialog.Close)`
