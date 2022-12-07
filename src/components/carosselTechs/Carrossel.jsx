@@ -42,6 +42,9 @@ export default function Carrossel() {
 
   
     }
+    .rec-arrow{
+        display: none;
+    }
  
 
     `
@@ -62,7 +65,7 @@ export default function Carrossel() {
         <DivCarrosel>
 
         <div className="App">
-            <Carousel breakPoints={Formatos}>
+            <Carousel breakPoints={Formatos} enableAutoPlay={true} preventDefaultTouchmoveEvent={true}>
                 <Card icone={<img src={html}></img>} />
                 <Card icone={<img src={css}></img>} />
                 <Card icone={<img src={js}></img>} />
