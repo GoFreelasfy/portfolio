@@ -1,7 +1,7 @@
 export const Data = [
     {
         pergunta: "Por que contratar a Empresa?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+        resposta: "Oferecemos um serviço completo aos nossos clientes, desde o primeiro contato, onde levantamos o escopo da solução, até a entrega com tudo estipulado da forma que foi solicitado!",
         visivel: true
     },
     {
@@ -36,43 +36,43 @@ export const Data = [
     },
     
     
-    //escondidos
-    {
-        pergunta: "Por que contratar a Empresa?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
-        visivel: false
+    // //escondidos
+    // {
+    //     pergunta: "Por que contratar a Empresa?",
+    //     resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+    //     visivel: false
 
-    },
-    {
-        pergunta: "Quanto custa um site?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
-        visivel: false
+    // },
+    // {
+    //     pergunta: "Quanto custa um site?",
+    //     resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+    //     visivel: false
 
-    },
-    {
-        pergunta: "O pagamento pode ser parcelado?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
-        visivel: false
+    // },
+    // {
+    //     pergunta: "O pagamento pode ser parcelado?",
+    //     resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+    //     visivel: false
 
-    },
-    {
-        pergunta: "Como são as estapas de desenvolvimento?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
-        visivel: false
+    // },
+    // {
+    //     pergunta: "Como são as estapas de desenvolvimento?",
+    //     resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+    //     visivel: false
 
-    },
-    {
-        pergunta: "O site contará com responsividade?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
-        visivel: false
+    // },
+    // {
+    //     pergunta: "O site contará com responsividade?",
+    //     resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+    //     visivel: false
 
-    },
-    {
-        pergunta: "Por que contratar a Empresoiia?",
-        resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
-        visivel: false
+    // },
+    // {
+    //     pergunta: "Por que contratar a Empresoiia?",
+    //     resposta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in, ex reiciendis exercitationem distinctio consequuntur ipsam!",
+    //     visivel: false
 
-    },    
+    // },    
 
 ]
 

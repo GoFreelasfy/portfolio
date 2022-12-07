@@ -5,6 +5,8 @@ import styled from "styled-components";
 
 const DivFaq = styled.div`
   margin: 0;
+  margin-bottom: 7rem;
+
 
   .caixa {
     margin: 0 auto;
@@ -12,6 +14,10 @@ const DivFaq = styled.div`
     border-bottom: solid 2px var(--gray);
     align-items: center;
     justify-content: center;
+
+    .resposta {
+      max-width:1000px;
+    }
 
     h1 {
       display: flex;
@@ -94,7 +100,7 @@ const Faq = ({ data }) => {
         {data.map((item, index) => {
           return (
             <div className="global">
-              {show && item.visivel == true ? (
+              
                 <div className="controle">
                   <div className="caixa">
                     <Wrap onClick={() => toggle(index)} key={index}>
@@ -111,15 +117,10 @@ const Faq = ({ data }) => {
                     ) : null}
                   </div>
                 </div>
-              ) : null}
             </div>
           );
         })}
 
-        <div className="botao">
-          <button onClick={() => setShow(!show)}>Mais Duvidas</button>
-          <button onClick={() => alterar(data)}>Update</button>
-        </div>
       </DivFaq>
     </IconContext.Provider>
   );

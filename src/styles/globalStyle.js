@@ -33,6 +33,11 @@ a{
 }
 .container-carrossel {
   width: 90%;
+  margin-bottom: 7rem;
+  
+  .titulo{
+    margin-bottom: 7rem;
+  }
 }
 .container {
   max-width: 1440px;
