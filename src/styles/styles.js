@@ -17,12 +17,12 @@ export const DivHome = styled.div`
       flex-direction: column;
       justify-content: center;
 
-    .tecnologias {
-      margin-bottom: 20rem;
-    }
-    .container-carrossel {
-      width: 90%;
-    }
+      .tecnologias {
+        margin-bottom: 20rem;
+      }
+      .container-carrossel {
+        width: 90%;
+      }
 
       .carrosel {
         width: 100%;
@@ -46,7 +46,7 @@ export const DivHome = styled.div`
     justify-content: center;
   }
   .main-content {
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
     h1,
     span {
@@ -56,6 +56,7 @@ export const DivHome = styled.div`
       margin-bottom: 1rem;
       font-weight: 600;
       color: var(--white);
+      font-size: 44px;
     }
     span {
       color: var(--orange);
@@ -64,6 +65,7 @@ export const DivHome = styled.div`
       font-family: "Montserrat", sans-serif;
       color: var(--white);
       margin-bottom: 2rem;
+      font-size: 18px;
     }
   }
 
@@ -341,17 +343,17 @@ export const DivHome = styled.div`
           min-width: 100%;
           margin: 0;
         }
-   
+
         label {
           display: block;
           margin-bottom: 0.25rem;
         }
       }
-      input{
+      input {
         min-width: 100%;
       }
     }
-    .mensagem{
+    .mensagem {
       min-width: 100%;
     }
     @media (max-width: 1200px) {
@@ -384,19 +386,13 @@ export const DivHome = styled.div`
 
     @media (max-width: 768px) {
       .servicos-cards {
-        grid-template-columns: 300px;
-        /* display: flex; */
-        /* flex-basis: 0; */
-        /* grid-template-columns: repeat(4, 300px); */
-        /* padding: 1rem; */
-        /* margin-left: 2rem; */
-        /* grid-auto-flow: column;
-        grid-auto-columns: 45%;
-        gap: 5rem;
-        background-color: red;
+        grid-template-columns: 1fr;
+        grid-auto-flow: column;
+        justify-content: start;
+        width: 100%;
         overflow-x: auto;
-        overscroll-behavior-inline: contain; */
-        /* object-fit: cover; */
+        height: 100%;
+        padding: 1rem;
 
         & > div {
           /* inline-size: 100%;

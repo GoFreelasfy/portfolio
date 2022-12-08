@@ -34,9 +34,14 @@ export default function TextArea({ name, id, text, placeholder }) {
       font-size: 14px;
     }
 
+    @media (min-width: 1200px) {
+      .form_control textarea {
+        width: 99%;
+      }
+    }
     @media (max-width: 1200px) {
       .form_control textarea {
-        width: 90%;
+        width: 100%;
       }
     }
   `;
@@ -45,7 +50,7 @@ export default function TextArea({ name, id, text, placeholder }) {
       <DivTextArea>
         <div className="form_control">
           <label htmlFor={id}>{text}</label>
-          <textarea 
+          <textarea
             name={name}
             id={id}
             rows="10"
