@@ -10,6 +10,7 @@ const Overlay = styled(Dialog.Overlay)`
   width: 100vw;
   height: 100vh;
   padding: 1rem;
+  z-index: 2;
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
 `;
@@ -23,6 +24,7 @@ const Content = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
   .title,
   .description {
     font-family: "Poppins", sans-serif;

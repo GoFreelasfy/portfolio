@@ -14,7 +14,7 @@ export default function CardServicos({
     background: var(--white);
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
-    max-width: 300px;
+    width: 300px;
     padding: 2rem;
     display: flex;
     cursor: pointer;
