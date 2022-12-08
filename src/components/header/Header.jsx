@@ -8,11 +8,16 @@ const DivHeader = styled.div`
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+    position: fixed;
+    min-width: 100%;
+    background-color: var(--white);
+    z-index: 1;
+    border-bottom: 1px solid var(--blue);
   }
-  hr {
-    height: 3px;
+  /* #line {
+    height: 20px;
     background: linear-gradient(90deg, #02485a 0%, #4e96aa 100%);
-  }
+  } */
   .nav {
     display: flex;
     align-items: center;
@@ -74,10 +79,7 @@ const DivHeader = styled.div`
       .logo {
         margin: 0 auto;
       }
-      /* display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem; */
+
       .menu {
         display: flex;
         flex-direction: column;
@@ -106,6 +108,9 @@ const DivHeader = styled.div`
         }
         &.open {
           transform: translateX(0);
+          /* position: fixed; */
+          position: fixed;
+          z-index: 1;
         }
       }
 
@@ -205,7 +210,7 @@ export default function Header() {
         </div>
       </header>
 
-      <hr />
+      {/* <div id="line"></div> */}
     </DivHeader>
   );
 }
