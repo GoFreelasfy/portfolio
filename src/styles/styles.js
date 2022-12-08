@@ -9,6 +9,29 @@ export const DivHome = styled.div`
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    .techs-content {
+      margin-bottom: 3rem;
+      span,
+      h2 {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+      }
+
+      span {
+        color: var(--blue-light);
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 36px;
+        margin-bottom: 4rem;
+      }
+    }
     .container {
       margin: 0 auto;
       padding: 0;
@@ -94,6 +117,8 @@ export const DivHome = styled.div`
       }
     }
   }
+  
+  
   .servicos-cards {
     align-items: center;
     justify-content: center;
