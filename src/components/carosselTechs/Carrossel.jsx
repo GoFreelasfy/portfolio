@@ -60,6 +60,7 @@ export default function Carrossel() {
     .rec-dot {
         box-shadow: solid 1px;
     }
+    
 
  
 
