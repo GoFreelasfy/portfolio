@@ -90,14 +90,7 @@ export default function Home() {
             title="Hospedagem e SEO"
             description="Fazemos o suporte de hospedagens de sites, criação de domínio e metricas avançadas de visibilidade e gestão!"
           />
-          {/* {cardDiferenciaisData.map((item, index) => (
-            <CardDiferenciais
-              key={index}
-              image={item.image}
-              title={item.title}
-              description={item.description}
-            />
-          ))} */}
+
         </div>
       </section>
       <section className="sobre">
@@ -140,8 +133,12 @@ export default function Home() {
       </section>
  
       <section className="tecnologias">
-        <div className="container-carrossel">
+          <div className="techs-content">
+
           <span className="titulo">TECNOLOGIAS</span>
+          <h2>Confira abaixo as tecnologias que trabalhamos!</h2>
+          </div>
+        <div className="container-carrossel">
           <Carrossel/>
 
         </div>
