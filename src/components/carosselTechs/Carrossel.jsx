@@ -10,6 +10,12 @@ import js from "../../../public/img/js.png"
 import react from "../../../public/img/react.png"
 import spring from "../../../public/img/spring.png"
 
+import wordpress from "../../../public/img/wordpress.png"
+import styledc from "../../../public/img/styled.png"
+import shopify from "../../../public/img/shopify.png"
+import next from "../../../public/img/next.png"
+import sass from "../../../public/img/sass.png"
+
 export default function Carrossel() {
 
     const DivCarrosel = styled.div`
@@ -45,6 +51,16 @@ export default function Carrossel() {
     .rec-arrow{
         display: none;
     }
+    .rec-dot_active {
+   
+        background-color: var(--blue-dark);
+        color: var(--blue-dark);
+        box-shadow: none;
+    }
+    .rec-dot {
+        box-shadow: solid 1px;
+    }
+
  
 
     `
@@ -72,6 +88,12 @@ export default function Carrossel() {
                 <Card icone={<img src={react}></img>} />
                 <Card icone={<img src={java}></img>} />
                 <Card icone={<img src={spring} alt='Linguagem spring-boot'></img>} />
+
+                <Card icone={<img src={shopify} alt='Linguagem spring-boot'></img>} />
+                <Card icone={<img src={wordpress} alt='Linguagem spring-boot'></img>} />
+                <Card icone={<img src={next} alt='Linguagem spring-boot'></img>} />
+                <Card icone={<img src={sass} alt='Linguagem spring-boot'></img>} />
+                <Card icone={<img src={styledc} alt='Linguagem spring-boot'></img>} />
          
   
             </Carousel>
