@@ -17,6 +17,7 @@ import { Data } from "../../components/sanfonaFaq/Data";
 import Input from "../../components/form/input/Input";
 import TextArea from "../../components/form/textarea/TextArea";
 import Carrossel from "../../components/carosselTechs/Carrossel";
+import NewForm from "../../components/newFormContato/NewForm";
 
 export default function Home() {
 
@@ -131,19 +132,19 @@ export default function Home() {
           </div>
         </div>
       </section>
- 
+
       <section className="tecnologias">
-          <div className="techs-content">
+        <div className="techs-content">
 
           <span className="titulo">TECNOLOGIAS</span>
           <h2>Confira abaixo as tecnologias que trabalhamos!</h2>
-          </div>
+        </div>
         <div className="container-carrossel">
-          <Carrossel/>
+          <Carrossel />
 
         </div>
       </section>
-   
+
       <section className="faq">
         <div className="container">
           <div className="titulo">
@@ -161,6 +162,20 @@ export default function Home() {
           </div>
           <Faq data={Data} />
         </div>
+      </section>
+      <section className="form">
+        <div className="container">
+          <div className="fale-conosco-content">
+            <h2>Fale conosco!</h2>
+            <p>
+              Está com alguma dúvida? Preencha os campos abaixo com os seguintes
+              dados que em breve entraremos em contato{" "}
+            </p>
+            <NewForm />
+
+          </div>
+        </div>
+
       </section>
       <section className="fale-conosco">
         <div className="container">
