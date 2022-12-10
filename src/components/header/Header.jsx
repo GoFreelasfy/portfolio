@@ -11,7 +11,7 @@ const DivHeader = styled.div`
     position: fixed;
     min-width: 100%;
     background-color: var(--white);
-    z-index: 1;
+    z-index: 2;
     border-bottom: 1px solid var(--blue);
   }
   /* #line {
@@ -110,7 +110,7 @@ const DivHeader = styled.div`
           transform: translateX(0);
           /* position: fixed; */
           position: fixed;
-          z-index: 1;
+          z-index: 2;
         }
       }
 

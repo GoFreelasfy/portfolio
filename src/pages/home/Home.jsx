@@ -6,8 +6,6 @@ import imagem1 from "../../assets/img/imagem-1.png";
 import imagem2 from "../../assets/img/imagem-2.png";
 import { DivHome } from "../../styles/styles";
 
-
-
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais";
@@ -18,10 +16,9 @@ import Input from "../../components/form/input/Input";
 import TextArea from "../../components/form/textarea/TextArea";
 import Carrossel from "../../components/carosselTechs/Carrossel";
 import NewForm from "../../components/newFormContato/NewForm";
+import ModalProjetos from "../../components/modalProjetos/ModalProjetos";
 
 export default function Home() {
-
-
   return (
     <DivHome>
       <Header />
@@ -91,7 +88,6 @@ export default function Home() {
             title="Hospedagem e SEO"
             description="Fazemos o suporte de hospedagens de sites, criação de domínio e metricas avançadas de visibilidade e gestão!"
           />
-
         </div>
       </section>
       <section className="sobre">
@@ -133,15 +129,19 @@ export default function Home() {
         </div>
       </section>
 
+
+
+      <section className="container">
+        <ModalProjetos />
+      </section>
+
       <section className="tecnologias">
         <div className="techs-content">
-
           <span className="titulo">TECNOLOGIAS</span>
           <h2>Confira abaixo as tecnologias que trabalhamos!</h2>
         </div>
         <div className="container-carrossel">
           <Carrossel />
-
         </div>
       </section>
 
