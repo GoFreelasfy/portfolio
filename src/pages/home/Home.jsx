@@ -12,8 +12,7 @@ import CardDiferenciais from "../../components/cardDiferenciais/CardDiferenciais
 import { cardServicosData } from "../../components/cardServicos/CardServicosData";
 import Faq from "../../components/sanfonaFaq/Faq";
 import { Data } from "../../components/sanfonaFaq/Data";
-import Input from "../../components/form/input/Input";
-import TextArea from "../../components/form/textarea/TextArea";
+
 import Carrossel from "../../components/carosselTechs/Carrossel";
 import NewForm from "../../components/newFormContato/NewForm";
 import ModalProjetos from "../../components/modalProjetos/ModalProjetos";
