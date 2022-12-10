@@ -119,8 +119,7 @@ export const DivHome = styled.div`
       }
     }
   }
-  
-  
+
   .servicos-cards {
     align-items: center;
     justify-content: center;
@@ -479,5 +478,20 @@ export const DivHome = styled.div`
         width: 23rem;
       }
     }
+  }
+
+  #whatsapp-bottom-button {
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    /* background-color: #4cca5b; */
+    background-color: #00a884;
+    color: var(--white);
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+  .whats-btn {
   }
 `;
