@@ -7,11 +7,11 @@ import * as Yup from 'yup';
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 
 const schema = Yup.object().shape({
-    nome: Yup.string().required(),
-    email: Yup.string().email().required(),
-    telefone: Yup.string().min(11).max(14).required().matches(phoneRegExp).typeError("Formato de numero invalido"),
-    assunto: Yup.string().max(999).required(),
-    mensagem: Yup.string().required()
+    nome: Yup.string().required('Campo obrigatório!'),
+    email: Yup.string().email().required('Campo obrigatório!'),
+    telefone: Yup.string().min(11, 'Telefone inválido, minimo 11 caracteres!').max(14, "Numero de telefone inválido! Máximo 14 caracteres").required('Campo obrigatório!').matches(phoneRegExp).typeError("Formato de numero inválido"),
+    assunto: Yup.string().max(999).required('Campo obrigatório!'),
+    mensagem: Yup.string().required('Campo obrigatório!')
 
 })
 
@@ -21,10 +21,20 @@ export default function NewForm() {
 
 
     const DivForm = styled.div`
+
+
+    .form_control .form-error {
+        color: red;
+        margin-bottom: 1rem;
+        position: relative;
+        top: 0;
+        
+    }
      .form_control label {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       font-family: "Poppins", sans-serif;
+      min-width: 100%;
       /* display: block; */
     }
 
@@ -103,9 +113,14 @@ export default function NewForm() {
                                 <Field className='input' type='text' id='nome' name='nome' placeholder='Digite o seu nome' />
                                 <ErrorMessage className="form-error" component="span" name='nome' />
 
+                                <br />
+                                <br />
+
                                 <label htmlFor="email">E-mail</label>
                                 <Field className='input' id='email' type='email' name='email' placeholder='Digite o seu E-mail' />
                                 <ErrorMessage className="form-error" component="span" name='email' />
+                                <br />
+                                <br />
                             </div>
 
 
@@ -114,18 +129,23 @@ export default function NewForm() {
                                 <label htmlFor="nome">Telefone</label>
                                 <Field className='input' id='telefone' type='tel' name='telefone' placeholder='Digite o seu Telefone' />
                                 <ErrorMessage className="form-error" component="span" name='telefone' />
+                                <br />
+                                <br />
+
 
                                 <label htmlFor="nome">Assunto</label>
-                                <Field className='input' id='assunto'type='text' name='assunto' placeholder='Digite o assunto da mensagem' />
+                                <Field className='input' id='assunto' type='text' name='assunto' placeholder='Digite o assunto da mensagem' />
                                 <ErrorMessage className="form-error" component="span" name='assunto' />
-
+                                <br />
+                                <br />
                             </div>
 
 
                             <div className="field">
                                 <label htmlFor="nome">Mensagem</label>
-                                <TextArea  id='mensagem' name='mensagem' placeholder='Digite a mensagem' />
+                                <TextArea id='mensagem' name='mensagem' placeholder='Digite a mensagem' />
                                 <ErrorMessage className="form-error" component="span" name='mensagem' />
+                                <br />
 
                             </div>
 
