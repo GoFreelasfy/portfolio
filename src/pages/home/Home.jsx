@@ -15,6 +15,7 @@ import { Data } from "../../components/sanfonaFaq/Data";
 import Input from "../../components/form/input/Input";
 import TextArea from "../../components/form/textarea/TextArea";
 import Carrossel from "../../components/carosselTechs/Carrossel";
+import NewForm from "../../components/newFormContato/NewForm";
 import ModalProjetos from "../../components/modalProjetos/ModalProjetos";
 
 export default function Home() {
@@ -128,6 +129,8 @@ export default function Home() {
         </div>
       </section>
 
+
+
       <section className="container">
         <ModalProjetos />
       </section>
@@ -160,6 +163,7 @@ export default function Home() {
           <Faq data={Data} />
         </div>
       </section>
+
       <section className="fale-conosco">
         <div className="container">
           <div className="fale-conosco-content">
@@ -169,44 +173,8 @@ export default function Home() {
               dados que em breve entraremos em contato{" "}
             </p>
           </div>
-          <form className="form">
-            <div className="col-2">
-              <Input
-                type="text"
-                text="Nome"
-                name="nome"
-                id="nomeId"
-                placeholder="Digite o seu nome"
-              />
-              <Input
-                type="email"
-                text="E-mail"
-                name="email"
-                id="emailId"
-                placeholder="Digite o seu e-mail"
-              />
-            </div>
-            <div className="col-2">
-              <Input
-                type="tel"
-                text="Telefone"
-                name="telefone"
-                id="telefoneId"
-                placeholder="(XX) XXXXX-XXXX"
-              />
-              <Input
-                type="text"
-                text="Assunto"
-                name="assunto"
-                id="assuntoId"
-                placeholder="Ex: Quero fazer um orçamento"
-              />
-            </div>
-            <TextArea name="mensagem" id="mensagem" text="Mensagem" />
-            <button type="submit" className="btn">
-              ENVIAR
-            </button>
-          </form>
+          <NewForm/>
+            
         </div>
       </section>
       <Footer />
