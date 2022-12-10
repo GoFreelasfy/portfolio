@@ -17,6 +17,7 @@ import TextArea from "../../components/form/textarea/TextArea";
 import Carrossel from "../../components/carosselTechs/Carrossel";
 import NewForm from "../../components/newFormContato/NewForm";
 import ModalProjetos from "../../components/modalProjetos/ModalProjetos";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -129,8 +130,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       <section className="container">
         <ModalProjetos />
       </section>
@@ -173,10 +172,16 @@ export default function Home() {
               dados que em breve entraremos em contato{" "}
             </p>
           </div>
-          <NewForm/>
-            
+          <NewForm />
         </div>
       </section>
+
+      <button id="whatsapp-bottom-button">
+        <a href="https://wa.me/+5511972266510" target="_blank">
+          <BsWhatsapp size={"2rem"} color="#ffffff" />
+        </a>
+      </button>
+
       <Footer />
     </DivHome>
   );
