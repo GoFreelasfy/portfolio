@@ -14,6 +14,9 @@ const DivHeader = styled.div`
     z-index: 2;
     border-bottom: 1px solid var(--blue);
   }
+  ul {
+    margin-bottom: 0;
+  }
   /* #line {
     height: 20px;
     background: linear-gradient(90deg, #02485a 0%, #4e96aa 100%);

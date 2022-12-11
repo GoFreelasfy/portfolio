@@ -3,7 +3,6 @@ import NewForm from "../newFormContato/NewForm";
 import styled from "styled-components"
 
 const FaleConoscoSection = styled.section`
- .fale-conosco {
     padding-top: 2rem;
     padding-bottom: 2rem;
     background: var(--bg-white);
@@ -14,7 +13,6 @@ const FaleConoscoSection = styled.section`
       width: 90%;
       gap: 10%;
     }
-  }
   .fale-conosco-content {
     h2,
     p {
@@ -35,7 +33,7 @@ const FaleConoscoSection = styled.section`
 `
 export default function FaleConosco() {
   return (
-    <FaleConoscoSection className="fale-conosco">
+    <FaleConoscoSection >
     <div className="container">
       <div className="fale-conosco-content">
         <h2>Fale conosco!</h2>
