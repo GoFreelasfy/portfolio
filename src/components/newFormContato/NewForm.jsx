@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ErrorMessage, Formik, Field, Form } from "formik";
-import TextArea from "../form/textarea/TextArea";
 import * as Yup from "yup";
 
 const phoneRegExp =
@@ -22,6 +21,10 @@ const schema = Yup.object().shape({
 
 export default function NewForm() {
   const DivForm = styled.div`
+  .textarea{
+    width: 100%;
+    height: 15rem;
+  }
     .form_control .form-error {
       color: red;
       margin-bottom: 1rem;
@@ -163,9 +166,11 @@ export default function NewForm() {
 
               <div className="field">
                 <label htmlFor="mensagem">Mensagem</label>
-                <TextArea
+                <Field
+                  className='textarea'
                   id="mensagem"
                   name="mensagem"
+                  as='textarea'
                   placeholder="Digite a mensagem"
                 />
                 <ErrorMessage

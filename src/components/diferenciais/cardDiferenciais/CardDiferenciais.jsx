@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import design from "../../assets/icons/design.png";
+import design from "../../../assets/icons/design.png";
+
 
 export default function CardDiferenciais({ title, image, description }) {
   const DivCardDiferenciais = styled.div`

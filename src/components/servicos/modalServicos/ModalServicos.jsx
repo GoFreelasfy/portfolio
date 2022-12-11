@@ -42,7 +42,7 @@ const Content = styled(Dialog.Content)`
     margin-right: auto;
     margin-bottom: 1rem;
     img {
-      width: 100%;
+      width:100%;
       height: 100%;
     }
   }

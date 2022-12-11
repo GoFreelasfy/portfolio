@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import arrowLeft from "../../assets/icons/arrow-left.svg";
+import arrowLeft from "../../../assets/icons/arrow-left.svg";
 import * as Dialog from "@radix-ui/react-dialog";
-import ModalServicos from "../modalServicos/ModalServicos";
+import ModalServicos from "../../servicos/modalServicos/ModalServicos";
 
 export default function CardServicos({
   title,

@@ -64,7 +64,7 @@ const DivModalProjetos = styled.div`
 export default function ModalProjetos() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <DivModalProjetos>
+    <DivModalProjetos className="container">
       <CCarousel controls indicators interval={2000} transition="crossfade">
         <CCarouselItem className="carrousel-item">
           <CImage
