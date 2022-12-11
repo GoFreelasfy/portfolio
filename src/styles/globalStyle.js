@@ -51,18 +51,13 @@ a{
     margin-bottom: 7rem;
   }
 }
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 7rem;
   padding-right: 7rem;
 }
-@media (max-width: 768px) {
-      .container{
-        padding-left: 2rem;
-      padding-right: 2rem;
-      }
-    }
 
 .btn {
   font-family: "Poppins",sans-serif;
@@ -161,6 +156,10 @@ a{
     }
 
     @media (max-width: 768px) {
+      .container{
+        padding-left: 2rem;
+      padding-right: 2rem;
+      }
       .servicos-cards {
         grid-template-columns: 1fr;
         grid-auto-flow: column;
@@ -221,5 +220,4 @@ a{
       }
     }
   }
-
 `;

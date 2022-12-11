@@ -12,73 +12,9 @@ export default function Footer() {
       list-style: none;
       text-decoration: none;
     }
-    @media (min-width: 1920px) {
-      #container {
-        padding: 2rem 7.5rem;
-      }
-      #caixa1 {
-        gap: 16.5rem;
-      }
-      #caixa2 {
-        gap: 16.5rem;
-      }
 
-    }
-    @media (max-width: 1920px) {
-      #container {
-        padding: 2rem 7.5rem;
-      }
-      #caixa1 {
-        gap: 16.5rem;
-      }
-      #caixa2 {
-        gap: 16.5rem;
-      }
-    }
-
-    @media (max-width: 1320px) {
-      #caixa1 {
-        gap: 10rem;
-      }
-      #caixa2 {
-        gap: 10rem;
-      }
-    }
-
-
-    @media (max-width: 1150px) {
-      #logo {
-        text-align: center;
-      }
-      #container {
-        padding: 2rem 2.5rem;
-        /* flex-direction: column; */
-      }
-      #caixa1 {
-        display: flex;
-        gap: 3.25rem;
-      }
-      #caixa2 {
-        display: flex;
-        gap: 3.25rem;
-      }
-      li a {
-      }
-    }
-    @media (max-width: 733px) {
-      #container {
-        flex-direction: column;
-      }
-    }
-    @media (max-width: 450px) {
-      #caixa2 {
-        flex-wrap: wrap;
-      }
-    }
-    @media (max-width: 430px) {
-      #caixa2 {
-        gap: 2.3rem;
-      }
+    ul {
+      padding: 0;
     }
 
     h1 {
@@ -96,12 +32,13 @@ export default function Footer() {
 
     #container {
       justify-content: space-around;
-      margin: 0;
-      gap: 0;
+      /* margin: 0;
+      gap: 0; */
       width: 100%;
       display: flex;
     }
-    hr {
+
+    .line {
       border-bottom: 1px solid var(--gray);
     }
     #logo {
@@ -137,6 +74,74 @@ export default function Footer() {
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         color: var(--bg-white);
+      }
+    }
+
+    @media (min-width: 1920px) {
+      #container {
+        padding: 2rem 7.5rem;
+      }
+      #caixa1 {
+        gap: 16.5rem;
+      }
+      #caixa2 {
+        gap: 16.5rem;
+      }
+    }
+    @media (max-width: 1920px) {
+      #container {
+        padding: 2rem 7.5rem;
+      }
+      #caixa1 {
+        gap: 16.5rem;
+      }
+      #caixa2 {
+        gap: 16.5rem;
+      }
+    }
+
+    @media (max-width: 1320px) {
+      #caixa1 {
+        gap: 10rem;
+      }
+      #caixa2 {
+        gap: 10rem;
+      }
+    }
+
+    /*RESPONSIVE */
+    @media (max-width: 1150px) {
+      #logo {
+        text-align: center;
+      }
+      #container {
+        padding: 2rem 2.5rem;
+        /* flex-direction: column; */
+      }
+      #caixa1 {
+        display: flex;
+        gap: 3.25rem;
+      }
+      #caixa2 {
+        display: flex;
+        gap: 3.25rem;
+      }
+      li a {
+      }
+    }
+    @media (max-width: 733px) {
+      #container {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 450px) {
+      #caixa2 {
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 430px) {
+      #caixa2 {
+        gap: 2.3rem;
       }
     }
   `;
@@ -183,6 +188,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+
             <div id="ajuda">
               <h1>Ajuda</h1>
               <ul>
@@ -212,7 +218,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <hr />
+      <div className="line"></div>
       <div id="direitos">
         <p>©2022 Todos os direitos reservados XXXXXXX.</p>
       </div>

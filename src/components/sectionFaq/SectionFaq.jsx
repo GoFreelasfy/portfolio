@@ -1,9 +1,8 @@
 import React from 'react'
-import Faq from "../sanfonaFaq/Faq"
-import { Data } from "../sanfonaFaq/Data";
 import styled from "styled-components"
+import Faq from './sanfonaFaq/Faq'
+import {Data} from "./sanfonaFaq/Data"
 const FAQSection = styled.section`
-.faq {
     background-color: var(--bg-white);
     .container {
       min-width: 100%;
@@ -66,12 +65,10 @@ const FAQSection = styled.section`
         color: var(--blue);
       }
     }
-  }
-
 `
 export default function SectionFaq() {
   return (
-    <FAQSection className="faq">
+    <FAQSection >
         <div className="container">
           <div className="titulo">
             <span>FAQ</span>

@@ -21,10 +21,10 @@ const schema = Yup.object().shape({
 
 export default function NewForm() {
   const DivForm = styled.div`
-  .textarea{
-    width: 100%;
-    height: 15rem;
-  }
+    .textarea {
+      width: 100%;
+      height: 15rem;
+    }
     .form_control .form-error {
       color: red;
       margin-bottom: 1rem;
@@ -39,7 +39,8 @@ export default function NewForm() {
       /* display: block; */
     }
 
-    .form_control input {
+    .form_control input,
+    .form_control textarea {
       border-radius: 10px;
       border: none;
       margin: 10px auto 5px auto;
@@ -54,12 +55,13 @@ export default function NewForm() {
       font-size: 14px;
     }
 
-    /*Input text*/
     .form_control .input[type="text"],
     .form_control .input[type="email"],
     .form_control .input[type="tel"],
     .form_control [type="password"],
-    .form_control [type="number"] {
+    .form_control [type="number"],
+    .form_control[type="text-area"],
+    textarea {
       background-color: var(--white);
       border: none;
       border-radius: 10px;
@@ -72,7 +74,8 @@ export default function NewForm() {
     .form_control .input[type="email"],
     .form_control .input[type="tel"],
     .form_control [type="password"],
-    .form_control [type="number"] {
+    .form_control [type="number"],
+    textarea {
       padding-left: 1rem;
       color: var(--black);
       font-family: "Montserrat", sans-serif;
@@ -167,10 +170,10 @@ export default function NewForm() {
               <div className="field">
                 <label htmlFor="mensagem">Mensagem</label>
                 <Field
-                  className='textarea'
+                  className="textarea"
                   id="mensagem"
                   name="mensagem"
-                  as='textarea'
+                  as="textarea"
                   placeholder="Digite a mensagem"
                 />
                 <ErrorMessage
@@ -178,7 +181,6 @@ export default function NewForm() {
                   component="span"
                   name="mensagem"
                 />
-                <br />
               </div>
 
               <button className="btn" type="enviar">
