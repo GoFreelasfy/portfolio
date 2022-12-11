@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ErrorMessage, Formik, Field, Form } from "formik";
-import TextArea from "../form/textarea/TextArea";
 import * as Yup from "yup";
 
 const phoneRegExp =

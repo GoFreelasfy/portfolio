@@ -27,6 +27,18 @@ a{
   --blue:#02485A;
   --blue-dark:#02485A;
 }
+.titulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: var(--blue-light);
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
 
 .tecnologias {
   margin-bottom: 20rem;
@@ -66,6 +78,147 @@ a{
 
     &:hover {
       background: var(--orange-dark);
+    }
+  }
+
+
+  
+  /*-=-=-=-=-=-=RESPONSIVE=-=-=-=-=-=-*/
+  @media (max-width: 1920px) {
+    .imagem2 {
+      top: -10rem;
+    }
+  }
+  @media (max-width: 1320px) {
+    .imagem2 {
+      top: 0rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    .servicos-cards {
+      grid-template-columns: repeat(2, 300px);
+    }
+    .diferenciais {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+    }
+    .diferenciais-card {
+      left: 0;
+    }
+    .form {
+      gap: 0;
+      min-width: 100%;
+      .col-2 {
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+        width: 100%;
+        input {
+          min-width: 100%;
+          margin: 0;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+      }
+      input {
+        min-width: 100%;
+      }
+    }
+    .mensagem {
+      min-width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+      /* .servicos-cards {
+        grid-template-columns: repeat(2, 300px);
+      } */
+    }
+    @media (max-width: 1322px) {
+      .imagem.imagem2 {
+      }
+    }
+
+    @media (max-width: 1336px) {
+      .titulo {
+        margin-bottom: 2rem;
+      }
+
+      .caixa {
+        align-items: center;
+        flex-direction: column;
+      }
+      .caixa.final {
+        flex-direction: column-reverse;
+      }
+
+      .conteudo-texto {
+        width: 85%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .servicos-cards {
+        grid-template-columns: 1fr;
+        grid-auto-flow: column;
+        justify-content: start;
+        width: 100%;
+        overflow-x: auto;
+        height: 100%;
+        padding: 1rem;
+      }
+
+      .diferenciais-cards {
+        flex-direction: column;
+      }
+      .diferenciais-content {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .conteudo-texto {
+        max-width: 20rem;
+        h1 {
+          text-align: left;
+        }
+        p {
+          text-align: left;
+        }
+      }
+    }
+    .faq {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      .texto {
+        h1 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+    @media (max-width: 544px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      #ideia {
+        font-size: 1.5rem;
+      }
+      #preocupada {
+        font-size: 1.5rem;
+      }
+      .conteudo-texto {
+        width: 23rem;
+      }
+      .sobre img {
+        width: 23rem;
+      }
     }
   }
 
