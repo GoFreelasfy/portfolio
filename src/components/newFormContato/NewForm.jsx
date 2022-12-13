@@ -16,7 +16,6 @@ const schema = Yup.object().shape({
     .min(11, "Telefone inválido, minimo 11 caracteres!")
     .max(14, "Numero de telefone inválido! Máximo 14 caracteres")
     .required("Campo obrigatório!")
-    .matches(phoneRegExp)
     .typeError("Formato de numero inválido"),
   assunto: Yup.string().max(999).required("Campo obrigatório!"),
   mensagem: Yup.string().required("Campo obrigatório!"),
@@ -91,7 +90,7 @@ export default function NewForm() {
       <Formik
         validationSchema={schema}
         initialValues={{
-          reply_to: "Equipe web",
+          reply_to: "macawti@gmail.com",
           from_name: "",
           email: "",
           telefone: "",
