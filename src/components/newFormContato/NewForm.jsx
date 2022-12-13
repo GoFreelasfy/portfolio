@@ -5,8 +5,6 @@ import * as Yup from "yup";
 import emailjs from '@emailjs/browser'
 import { useRef } from "react";
 
-const phoneRegExp =
-  /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 
 
 
