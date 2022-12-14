@@ -7,10 +7,48 @@ const DivFaq = styled.div`
   margin: 0;
   margin-bottom: 7rem;
 
+  @media (max-width: 2000px) {
+
+   .caixa h1 {
+      display: flex;
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 1rem 0;
+    }
+    .caixa p {
+      
+      font-size: 1.25rem;
+      padding: 2rem 0;
+      font-family: "Poppins", sans-serif;
+      color: var(--gray);
+      font-weight: 500;
+    
+    }
+
+  }
+
+  @media (max-width: 400px) {
+    max-width: 100%;
+
+    .caixa h1{
+      font-size: 1rem;
+      padding: .5rem 0;
+    }
+
+    .caixa p {
+      font-size: 1rem;
+    }
+
+}
+
+
+
 
   .caixa {
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
     border-bottom: solid 2px var(--gray);
     align-items: center;
     justify-content: center;
@@ -19,22 +57,9 @@ const DivFaq = styled.div`
       max-width:1000px;
     }
 
-    h1 {
-      display: flex;
-      width: 100%;
-      font-family: "Poppins", sans-serif;
-      font-size: 1.5rem;
-      font-weight: 500;
-      padding: 1rem 0;
-    }
-    p {
-      font-size: 1.25rem;
-      padding: 2rem 0;
-      font-family: "Poppins", sans-serif;
-      color: var(--gray);
-      font-weight: 500;
-    }
+
   }
+
 `;
 const Wrap = styled.div`
   gap: 20rem;
@@ -67,6 +92,7 @@ const Wrap = styled.div`
   @media (max-width: 488px) {
     gap: 0rem;
   }
+
 `;
 
 const Faq = ({ data }) => {
