@@ -5,7 +5,7 @@ import {Data} from "./sanfonaFaq/Data"
 const FAQSection = styled.section`
     background-color: var(--bg-white);
     .container {
-      min-width: 100%;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -65,6 +65,7 @@ const FAQSection = styled.section`
         color: var(--blue);
       }
     }
+
 `
 export default function SectionFaq() {
   return (

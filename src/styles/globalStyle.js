@@ -190,7 +190,7 @@ a{
       }
     }
     .faq {
-      width: 100%;
+      max-width: 100%;
       margin: 0 auto;
       padding: 0;
       .texto {
@@ -217,6 +217,13 @@ a{
       }
       .sobre img {
         width: 23rem;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .faq{
+      h2{
+        font-size: 1px;
       }
     }
   }
