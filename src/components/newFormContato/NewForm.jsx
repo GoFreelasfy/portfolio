@@ -2,24 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { ErrorMessage, Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-
-const phoneRegExp =
-  /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const schema = Yup.object().shape({
-  nome: Yup.string().required("Campo obrigatório!"),
+  from_name: Yup.string().required("Campo obrigatório!"),
   email: Yup.string().email().required("Campo obrigatório!"),
   telefone: Yup.string()
     .min(11, "Telefone inválido, minimo 11 caracteres!")
     .max(14, "Numero de telefone inválido! Máximo 14 caracteres")
     .required("Campo obrigatório!")
-    .matches(phoneRegExp)
     .typeError("Formato de numero inválido"),
   assunto: Yup.string().max(999).required("Campo obrigatório!"),
   mensagem: Yup.string().required("Campo obrigatório!"),
 });
 
 export default function NewForm() {
+  const form = useRef();
   const DivForm = styled.div`
     .textarea {
       width: 100%;
@@ -87,7 +86,8 @@ export default function NewForm() {
       <Formik
         validationSchema={schema}
         initialValues={{
-          nome: "",
+          reply_to: "macawti@gmail.com",
+          from_name: "",
           email: "",
           telefone: "",
           assunto: "",
@@ -95,10 +95,28 @@ export default function NewForm() {
         }}
         onSubmit={async (values) => {
           await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
+          // alert(JSON.stringify(values, null, 2));
+
+          console.log(values);
+
+          emailjs
+            .sendForm(
+              "service_hdf53pc",
+              "template_1i107qt",
+              form.current,
+              "nkwD9l9mNGei275Yk"
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            );
         }}
       >
-        <Form className="form">
+        <Form ref={form} className="form">
           <div className="form_control">
             <div className="form_control_label_input">
               <div className="field col-2">
@@ -108,13 +126,13 @@ export default function NewForm() {
                     className="input"
                     type="text"
                     id="nome"
-                    name="nome"
+                    name="from_name"
                     placeholder="Digite o seu nome"
                   />
                   <ErrorMessage
                     className="form-error"
                     component="span"
-                    name="nome"
+                    name="from_name"
                   />
                 </div>
 
@@ -183,7 +201,7 @@ export default function NewForm() {
                 />
               </div>
 
-              <button className="btn" type="enviar">
+              <button className="btn" type="submit" value="Send">
                 ENVIAR
               </button>
             </div>
