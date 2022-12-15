@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import whatsApp from "../../assets/icons/whatsapp.svg";
+import logoMacaw from "../../assets/icons/logo-macaw.svg";
 
 const DivHeader = styled.div`
   .header {
@@ -180,8 +181,7 @@ export default function Header() {
     <DivHeader>
       <header className="header container">
         <div className="logo">
-          {/* <img src="" alt="" /> */}
-          <h1>Logo</h1>
+          <img src={logoMacaw} alt="" />
         </div>
         <div className={`nav ${isOpen && "open"}`}>
           <nav>

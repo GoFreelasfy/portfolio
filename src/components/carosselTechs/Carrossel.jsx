@@ -31,7 +31,7 @@ export default function Carrossel() {
       color: #000000;
       font-size: 30px;
       margin-left: 2rem;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
 
       box-shadow: 10px 5px 20px #7878784b;
       display: flex;

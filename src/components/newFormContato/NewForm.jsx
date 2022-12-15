@@ -6,9 +6,6 @@ import emailjs from '@emailjs/browser'
 import { useRef } from "react";
 
 
-
-
-
 const schema = Yup.object().shape({
   from_name: Yup.string().required("Campo obrigatório!"),
   email: Yup.string().email().required("Campo obrigatório!"),
@@ -112,6 +109,7 @@ export default function NewForm() {
 
 
 
+
         }}
       >
         <Form ref={form} className="form">
@@ -198,7 +196,6 @@ export default function NewForm() {
                   name="mensagem"
                 />
               </div>
-
               <button className="btn" type="submit" value='Send'>
                 ENVIAR
               </button>

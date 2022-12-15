@@ -10,8 +10,8 @@ import {
   SectionFaq,
   FaleConosco,
   Tecnologias,
-  Sobre ,
-} from "../../components"
+  Sobre,
+} from "../../components";
 
 export default function Home() {
   return (
@@ -19,13 +19,13 @@ export default function Home() {
       <Header />
       <BannerMain />
       <Servicos />
-      <Diferenciais/>
-      <Sobre/>
-      <ModalProjetos />
-      <Tecnologias/>
-      <SectionFaq/>
-      <FaleConosco/>
-      <WhatsappButton/>
+      <Diferenciais />
+      <Sobre />
+      {/* <ModalProjetos /> */}
+      <Tecnologias />
+      <SectionFaq />
+      <FaleConosco />
+      <WhatsappButton />
       <Footer />
     </>
   );
