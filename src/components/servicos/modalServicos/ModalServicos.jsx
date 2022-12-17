@@ -42,7 +42,7 @@ const Content = styled(Dialog.Content)`
     margin-right: auto;
     margin-bottom: 1rem;
     img {
-      width:100%;
+      width: 100%;
       height: 100%;
     }
   }
@@ -64,6 +64,8 @@ const Content = styled(Dialog.Content)`
 
   @media (max-width: 425px) {
     min-width: 18rem;
+    max-width: 24rem;
+    padding: 1rem;
   }
 `;
 const CloseButton = styled(Dialog.Close)`

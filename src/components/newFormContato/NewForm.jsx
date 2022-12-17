@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { ErrorMessage, Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-
 
 const schema = Yup.object().shape({
   from_name: Yup.string().required("Campo obrigatório!"),
@@ -19,11 +18,12 @@ const schema = Yup.object().shape({
 });
 
 export default function NewForm() {
-  const form = useRef()
+  const form = useRef();
   const DivForm = styled.div`
     .textarea {
       width: 100%;
       height: 15rem;
+      resize: none;
     }
     .form_control .form-error {
       color: red;
@@ -98,21 +98,26 @@ export default function NewForm() {
           await new Promise((r) => setTimeout(r, 500));
           alert(JSON.stringify(values, null, 2));
 
-          console.log(values)
+          console.log(values);
 
-          emailjs.sendForm('service_hdf53pc', 'template_1i107qt', form.current, "nkwD9l9mNGei275Yk")
-          .then((result)=> {
-            console.log(result.text);
-          }, (error)=> {
-            console.log(error.text)
-          })
-
-
-
-
+          emailjs
+            .sendForm(
+              "service_hdf53pc",
+              "template_1i107qt",
+              form.current,
+              "nkwD9l9mNGei275Yk"
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            );
         }}
       >
-        <Form ref={form} className="form">
+        <Form ref={form} className="form" id="contato">
           <div className="form_control">
             <div className="form_control_label_input">
               <div className="field col-2">
@@ -196,7 +201,7 @@ export default function NewForm() {
                   name="mensagem"
                 />
               </div>
-              <button className="btn" type="submit" value='Send'>
+              <button className="btn" type="submit" value="Send">
                 ENVIAR
               </button>
             </div>

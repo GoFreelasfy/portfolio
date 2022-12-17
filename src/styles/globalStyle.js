@@ -73,6 +73,7 @@ a{
 
     &:hover {
       background: var(--orange-dark);
+      color: var(--white);
     }
   }
 
@@ -156,6 +157,9 @@ a{
     }
 
     @media (max-width: 768px) {
+        .main-content {
+          padding-top: 8rem;
+        }
       .container{
         padding-left: 2rem;
       padding-right: 2rem;
