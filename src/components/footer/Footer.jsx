@@ -28,6 +28,10 @@ export default function Footer() {
     li a {
       font-family: "Montserrat", sans-serif;
       font-size: 15px;
+
+      &:hover {
+        color: var(--orange);
+      }
     }
 
     #container {
@@ -62,6 +66,12 @@ export default function Footer() {
 
       img {
         margin-bottom: 1rem;
+      }
+
+      a {
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
     #direitos {
@@ -150,18 +160,16 @@ export default function Footer() {
     <DivFooter>
       <div id="container">
         <div id="contato">
-          <div id="logo">
-            <h1>LOGO</h1>
-          </div>
+          <div id="logo">{/* <img src={macawLogo} alt="Logo Macaw" /> */}</div>
           <div id="contatos">
             <li>
               <a href="" id="email">
-                jhonatas2004@gmail.com
+                macawti@gmail.com
               </a>
             </li>
             <li>
               <a href="" id="telefone">
-                +55 11 957818539
+                +55 11 972266510
               </a>
             </li>
           </div>
@@ -172,19 +180,19 @@ export default function Footer() {
               <h1>Empresa</h1>
               <ul id="menu-empresa">
                 <li>
-                  <a href="">Home</a>
+                  <a href="#home">Home</a>
                 </li>
                 <li>
-                  <a href="">Serviços</a>
+                  <a href="#servicos">Serviços</a>
                 </li>
                 <li>
-                  <a href="">Projetos</a>
+                  <a href="#projetos">Projetos</a>
                 </li>
                 <li>
-                  <a href="">Sobre nós</a>
+                  <a href="#sobre-nos">Sobre nós</a>
                 </li>
                 <li>
-                  <a href="">Contato</a>
+                  <a href="#contato">Contato</a>
                 </li>
               </ul>
             </div>
@@ -193,26 +201,26 @@ export default function Footer() {
               <h1>Ajuda</h1>
               <ul>
                 <li>
-                  <a href="">Termos e condições</a>
+                  <a href="#termos">Termos e condições</a>
                 </li>
                 <li>
-                  <a href="">Mapa do site</a>
+                  <a href="#mapa-do-site">Mapa do site</a>
                 </li>
                 <li>
-                  <a href="">FAQ</a>
+                  <a href="#faq">FAQ</a>
                 </li>
               </ul>
             </div>
           </div>
           <div id="social">
             <h1>Social</h1>
-            <a href="">
-              <img src={linkedin} alt="linkedin" />
-            </a>
-            <a href="">
+            <a href="https://www.instagram.com/macaw.it/" target="_blank">
               <img src={instagram} alt="instagram" />
             </a>
-            <a href="">
+            <a
+              href="https://www.facebook.com/profile.php?id=100088515982136&is_tour_dismissed=true"
+              target="_blank"
+            >
               <img src={facebook} alt="facebook" />
             </a>
           </div>
@@ -220,7 +228,7 @@ export default function Footer() {
       </div>
       <div className="line"></div>
       <div id="direitos">
-        <p>©2022 Todos os direitos reservados XXXXXXX.</p>
+        <p>©2022 Todos os direitos reservados Macaw.IT</p>
       </div>
     </DivFooter>
   );
