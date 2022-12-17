@@ -75,7 +75,7 @@ export default function Diferenciais() {
             Trabalhamos com as melhores e mais recentes tecnologias do Mercado,
             trazendo soluções otimizadas e Responsivas para seu negócio!
           </p>
-          <a href="#" className="btn">
+          <a href="#contato" className="btn">
             Entre em contato!
           </a>
         </div>

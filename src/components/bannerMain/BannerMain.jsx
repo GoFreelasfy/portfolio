@@ -49,7 +49,7 @@ export default function BannerMain() {
             Os nossos serviços possibilitam a transformação digital do seu
             negócio.
           </p>
-          <a href="#" className="btn">
+          <a href="#servicos" className="btn">
             Nossos serviços
           </a>
         </div>
