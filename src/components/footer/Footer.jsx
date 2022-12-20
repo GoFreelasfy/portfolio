@@ -163,12 +163,12 @@ export default function Footer() {
           <div id="logo">{/* <img src={macawLogo} alt="Logo Macaw" /> */}</div>
           <div id="contatos">
             <li>
-              <a href="" id="email">
+              <a href="mailto:macawti@gmail.com" id="email">
                 macawti@gmail.com
               </a>
             </li>
             <li>
-              <a href="" id="telefone">
+              <a href="tel:+5511972266510" id="telefone">
                 +55 11 972266510
               </a>
             </li>
