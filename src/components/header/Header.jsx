@@ -202,11 +202,11 @@ export default function Header() {
           </nav>
           <a
             className="btn-whats"
-            href="https://wa.me/+5511972266510"
+            href="https://wa.me/+5511991947735"
             target="_blank"
           >
             <img src={whatsApp} alt="Icone WhatsApp" />
-            (11) 97226-6510
+            (11) 99194-7735
           </a>
         </div>
         <div
