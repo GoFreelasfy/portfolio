@@ -20,7 +20,7 @@ const ButtonWhatsApp = styled.button`
 export default function WhatsappButton() {
   return (
     <ButtonWhatsApp>
-      <a href="https://wa.me/+5511972266510" target="_blank">
+      <a href="https://wa.me/+5511991947735" target="_blank">
         <BsWhatsapp size={"2rem"} color="#ffffff" />
       </a>
     </ButtonWhatsApp>
