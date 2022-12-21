@@ -168,8 +168,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="tel:+5511972266510" id="telefone">
-                +55 11 972266510
+              <a href="tel:+5511991947735" id="telefone">
+                +55 11 99194-7735
               </a>
             </li>
           </div>
