@@ -181,7 +181,9 @@ export default function Header() {
     <DivHeader>
       <header className="header container">
         <div className="logo">
-          <img src={logoMacaw} alt="" />
+          <a href="#home">
+            <img src={logoMacaw} alt="" />
+          </a>
         </div>
         <div className={`nav ${isOpen && "open"}`}>
           <nav>
